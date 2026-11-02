@@ -3,6 +3,7 @@ import { portfolioData } from '../data/portfolioData';
 import Icon from './Icon';
 import { motion } from 'framer-motion';
 
+
 export default function Hero() {
   const { personal } = portfolioData;
   const [hoveredElement, setHoveredElement] = useState(null);
@@ -177,7 +178,7 @@ export default function Hero() {
             
             {/* The Blueprint Image */}
             <img
-              src="/hero-blueprint.png"
+              src={`${import.meta.env.BASE_URL}hero-blueprint.png`}
               alt="Alejo Ezequiel Sosa - Blueprint de Desarrollo Web con Laptop Central"
               className="w-full h-full object-cover pointer-events-none"
             />
