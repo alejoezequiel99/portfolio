@@ -1,0 +1,20 @@
+WHAT
+(QUE)
+informacion personal
+skill (habilidades duras/blandas)
+experiencia(proyectos)
+formacion (certificados)
+
+
+how (como):
+estilo (glass, neobrut, y2K, retro,neum, minim...)
+fuentes (robar fuentes)
+colores (3,4)
+espaciado
+
+
+Where(DONDE)
+posicion de los elementos
+orden de las secciones
+
+ejemplos awwwards

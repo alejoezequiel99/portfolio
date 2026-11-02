@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    font-family: 'Rethink Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: #26087b;
+    color: #FFFFFF;
+  }
+
+  body {
+    background: radial-gradient(ellipse at 50% 0%, #4F20D2 0%, #2A097C 45%, #18034D 100%);
+    background-attachment: fixed;
+    color: #FFFFFF;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  /* Custom sleek scrollbar matching purple blueprint */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #170442;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #4F20D2;
+    border-radius: 6px;
+    border: 2px solid #170442;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #7C4DFF;
+  }
+}
+
+@layer components {
+  /* Purple Blueprint Grid matching the user's reference image */
+  .bg-blueprint-purple {
+    background-color: #3b14a8;
+    background-image: 
+      radial-gradient(rgba(196, 181, 253, 0.35) 1px, transparent 1px),
+      linear-gradient(to right, rgba(167, 139, 250, 0.15) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(167, 139, 250, 0.15) 1px, transparent 1px);
+    background-size: 28px 28px, 56px 56px, 56px 56px;
+  }
+
+  .bg-blueprint-lines {
+    background-image: 
+      linear-gradient(to right, rgba(167, 139, 250, 0.12) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(167, 139, 250, 0.12) 1px, transparent 1px);
+    background-size: 40px 40px;
+  }
+
+  /* Electric Purple Neumorphic Card */
+  .neu-card {
+    background: linear-gradient(145deg, #38119e 0%, #2e0b86 100%);
+    border: 1px solid rgba(167, 139, 250, 0.28);
+    box-shadow: 10px 10px 24px rgba(12, 2, 42, 0.7), -8px -8px 20px rgba(110, 60, 245, 0.3);
+    transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  .neu-card:hover {
+    border-color: rgba(196, 181, 253, 0.6);
+    box-shadow: 12px 12px 28px rgba(12, 2, 42, 0.8), -10px -10px 24px rgba(124, 77, 255, 0.45), 0 0 20px rgba(167, 139, 250, 0.3);
+  }
+
+  /* Deep elevated card */
+  .neu-card-deep {
+    background: linear-gradient(160deg, #320d91 0%, #250772 100%);
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    box-shadow: 12px 12px 26px rgba(10, 1, 35, 0.75), -8px -8px 22px rgba(95, 45, 220, 0.25);
+  }
+
+  /* Neumorphic Tactile Button */
+  .neu-btn {
+    background: linear-gradient(145deg, #3c13a8, #300c8b);
+    color: #FFFFFF;
+    border: 1px solid rgba(167, 139, 250, 0.35);
+    box-shadow: 5px 5px 14px rgba(12, 2, 42, 0.6), -5px -5px 14px rgba(110, 60, 245, 0.3);
+    font-weight: 700;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .neu-btn:hover {
+    transform: translateY(-2px);
+    background: linear-gradient(145deg, #4417bd, #360e9c);
+    border-color: rgba(221, 214, 254, 0.6);
+    box-shadow: 7px 7px 18px rgba(12, 2, 42, 0.75), -6px -6px 18px rgba(124, 77, 255, 0.45), 0 0 16px rgba(167, 139, 250, 0.4);
+  }
+
+  .neu-btn:active {
+    transform: translateY(1px);
+    box-shadow: inset 3px 3px 6px rgba(12, 2, 42, 0.8), inset -3px -3px 6px rgba(110, 60, 245, 0.35);
+  }
+
+  /* Vibrant Accent Neumorphic Button (Bright Violet / Lavender) */
+  .neu-btn-primary {
+    background: linear-gradient(135deg, #7C4DFF 0%, #531ee6 100%);
+    color: #FFFFFF;
+    border: 1px solid rgba(255, 255, 255, 0.45);
+    box-shadow: 6px 6px 16px rgba(12, 2, 42, 0.7), -5px -5px 16px rgba(147, 95, 255, 0.4), 0 0 18px rgba(124, 77, 255, 0.5);
+    font-weight: 800;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .neu-btn-primary:hover {
+    background: linear-gradient(135deg, #8c62ff 0%, #6025fa 100%);
+    transform: translateY(-2px);
+    box-shadow: 8px 8px 22px rgba(12, 2, 42, 0.8), -6px -6px 20px rgba(147, 95, 255, 0.6), 0 0 28px rgba(167, 139, 250, 0.75);
+    border-color: #FFFFFF;
+  }
+
+  .neu-btn-primary:active {
+    transform: translateY(1px);
+    box-shadow: inset 3px 3px 6px rgba(10, 1, 35, 0.8), inset -3px -3px 6px rgba(147, 95, 255, 0.4);
+  }
+
+  /* Neumorphic Soft Inset Container (Sunken input / display area) */
+  .neu-inset {
+    background: #250772;
+    border: 1px solid rgba(167, 139, 250, 0.2);
+    box-shadow: inset 4px 4px 10px rgba(10, 1, 35, 0.8), inset -3px -3px 8px rgba(110, 60, 245, 0.25);
+  }
+
+  /* Section heading badge */
+  .section-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.35rem 0.85rem;
+    border-radius: 9999px;
+    background: #2c0a88;
+    border: 1px solid rgba(196, 181, 253, 0.35);
+    color: #DDD6FE;
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    box-shadow: 4px 4px 10px rgba(10, 1, 35, 0.6), -3px -3px 8px rgba(110, 60, 245, 0.25);
+  }
+
+  /* Hotspot highlight "se pinta" animation */
+  .hotspot-painted {
+    background: radial-gradient(circle at center, rgba(167, 139, 250, 0.45) 0%, rgba(79, 32, 210, 0.6) 100%);
+    border: 2px solid #FFFFFF;
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.9), inset 0 0 20px rgba(196, 181, 253, 0.6);
+  }
+}
