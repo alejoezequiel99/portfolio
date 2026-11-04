@@ -4,6 +4,8 @@ import Icon from './Icon';
 import { motion } from 'framer-motion';
 
 
+
+
 export default function Hero() {
   const { personal } = portfolioData;
   const [hoveredElement, setHoveredElement] = useState(null);
@@ -176,12 +178,52 @@ export default function Hero() {
           {/* The Image Canvas with Perfectly Positioned Hotspots */}
           <div className="relative w-full aspect-[1024/596] rounded-2xl overflow-hidden mt-3 border border-purple-400/25 bg-[#4F20D2] shadow-inner select-none group">
             
-            {/* The Blueprint Image */}
-            <img
-              src={`${import.meta.env.BASE_URL}hero-blueprint.png`}
-              alt="Alejo Ezequiel Sosa - Blueprint de Desarrollo Web con Laptop Central"
-              className="w-full h-full object-cover pointer-events-none"
-            />
+            {/* Blueprint Background SVG */}
+            <svg
+              className="w-full h-full pointer-events-none absolute inset-0"
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 1024 596"
+              preserveAspectRatio="xMidYMid slice"
+            >
+              <rect width="1024" height="596" fill="#3B0FA8" />
+              {Array.from({ length: 20 }).map((_, i) => (
+                <line key={`v${i}`} x1={i * 54} y1="0" x2={i * 54} y2="596" stroke="#6D28D9" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.5" />
+              ))}
+              {Array.from({ length: 12 }).map((_, i) => (
+                <line key={`h${i}`} x1="0" y1={i * 54} x2="1024" y2={i * 54} stroke="#6D28D9" strokeWidth="0.5" strokeDasharray="4 4" opacity="0.5" />
+              ))}
+              <line x1="0" y1="0" x2="1024" y2="596" stroke="#7C3AED" strokeWidth="1" strokeDasharray="8 8" opacity="0.3" />
+              <line x1="1024" y1="0" x2="0" y2="596" stroke="#7C3AED" strokeWidth="1" strokeDasharray="8 8" opacity="0.3" />
+              <rect x="169" y="98" width="318" height="262" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <text x="210" y="160" fill="#DDD6FE" fontSize="22" fontFamily="monospace" fontWeight="bold">&lt;/&gt; Portfolio</text>
+              <line x1="169" y1="175" x2="487" y2="175" stroke="#A78BFA" strokeWidth="1" opacity="0.5" />
+              <rect x="190" y="190" width="270" height="12" rx="3" fill="#6D28D9" opacity="0.6" />
+              <rect x="190" y="212" width="200" height="12" rx="3" fill="#6D28D9" opacity="0.6" />
+              <rect x="190" y="234" width="240" height="12" rx="3" fill="#6D28D9" opacity="0.6" />
+              <rect x="350" y="200" width="320" height="210" rx="10" fill="#1E0664" stroke="#A78BFA" strokeWidth="2" opacity="0.9" />
+              <rect x="370" y="215" width="280" height="160" rx="4" fill="#2D0A8F" opacity="0.95" />
+              <rect x="330" y="405" width="360" height="18" rx="6" fill="#1E0664" stroke="#A78BFA" strokeWidth="1.5" opacity="0.9" />
+              <rect x="476" y="63" width="107" height="125" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <text x="510" y="142" fill="#DDD6FE" fontSize="52" fontFamily="serif" fontWeight="bold" opacity="0.9">T</text>
+              <rect x="599" y="110" width="220" height="149" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <circle cx="650" cy="155" r="20" fill="none" stroke="#C4B5FD" strokeWidth="1.5" opacity="0.7" />
+              <polyline points="610,245 665,180 700,215 730,165 810,245" fill="none" stroke="#A78BFA" strokeWidth="2" opacity="0.7" />
+              <rect x="778" y="182" width="102" height="89" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <path d="M815 225 L840 200 L855 215 L830 240 Z" fill="none" stroke="#C4B5FD" strokeWidth="2" opacity="0.8" />
+              <rect x="691" y="304" width="200" height="209" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <circle cx="791" cy="385" r="38" fill="none" stroke="#C4B5FD" strokeWidth="2" opacity="0.8" />
+              <line x1="780" y1="424" x2="802" y2="424" stroke="#A78BFA" strokeWidth="2" opacity="0.7" />
+              <line x1="784" y1="432" x2="798" y2="432" stroke="#A78BFA" strokeWidth="2" opacity="0.7" />
+              <rect x="154" y="391" width="200" height="101" rx="8" fill="none" stroke="#A78BFA" strokeWidth="1.5" opacity="0.8" />
+              <line x1="154" y1="391" x2="254" y2="492" stroke="#6D28D9" strokeWidth="1" opacity="0.5" />
+              <line x1="354" y1="391" x2="254" y2="492" stroke="#6D28D9" strokeWidth="1" opacity="0.5" />
+              <circle cx="82" cy="149" r="7" fill="none" stroke="#A78BFA" strokeWidth="2" opacity="0.7" />
+              <line x1="75" y1="149" x2="89" y2="149" stroke="#A78BFA" strokeWidth="1.5" opacity="0.7" />
+              <line x1="82" y1="142" x2="82" y2="156" stroke="#A78BFA" strokeWidth="1.5" opacity="0.7" />
+              <circle cx="942" cy="149" r="7" fill="none" stroke="#A78BFA" strokeWidth="2" opacity="0.7" />
+              <line x1="935" y1="149" x2="949" y2="149" stroke="#A78BFA" strokeWidth="1.5" opacity="0.7" />
+              <line x1="942" y1="142" x2="942" y2="156" stroke="#A78BFA" strokeWidth="1.5" opacity="0.7" />
+            </svg>
 
             {/* 6 INTERACTIVE HOTSPOTS OVER THE BLUEPRINT BOXES */}
             {hotspots.map((hotspot) => {
