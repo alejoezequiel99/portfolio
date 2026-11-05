@@ -9,7 +9,7 @@
 ### **Desarrollador Web & Especialista en Agentes IA**
 📍 *Berisso, Buenos Aires, Argentina*
 
-[🌐 Ver Demo en Vivo](https://alejoezequiel99.github.io/portfolio/) • [🐙 GitHub](https://github.com/alejoezequiel99) • [💼 LinkedIn](https://www.linkedin.com/in/alejo-sosa) • [✉ Contacto Directo](mailto:alejoezequiel9999@gmail.com)
+[🌐 Ver Demo en Vivo](https://alejoezequiel99.github.io/portfolio/) • [🐙 GitHub](https://github.com/alejoezequiel99) • [💼 LinkedIn]([https://www.linkedin.com/in/alejo-sosa](https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/)) • [✉ Contacto Directo](mailto:alejoezequiel9999@gmail.com)
 
 </div>
 
