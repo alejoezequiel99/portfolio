@@ -14,10 +14,10 @@
     linkedin: "https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/",
     phone: "+54 221 428 5618",
     whatsapp: "https://wa.me/542214285618",
-    educationPrimary: "Analista Programador Universitario (UNLP) & CFL 404 Berisso",
+    educationPrimary: "Estudiante Analista Programador Universitario (UNLP - 1° año) & CFL 404",
     bio: "Soy desarrollador web y estudiante de Analista Programador Universitario en la Universidad Nacional de La Plata (UNLP). Combino una sólida base en ciencias de la computación (algoritmos, lógica formal y estructuras de datos) con el desarrollo web moderno (JavaScript, React, Astro, Tailwind, NodeJS) y la aceleración mediante Agentes de Inteligencia Artificial (Cursor, Claude, OpenAI APIs). Cuento además con experiencia en el Ministerio de Seguridad de la PBA gestionando información sensible bajo rigurosos estándares de confidencialidad, integridad de datos y responsabilidad institucional.",
     stats: [
-      { label: "Universidad", value: "UNLP (Analista Programador)" },
+      { label: "Universidad", value: "UNLP (1° año en curso)" },
       { label: "Ubicación", value: "Berisso / La Plata, Arg." },
       { label: "Enfoque Core", value: "Web Dev, SQL & Agentes IA" },
       { label: "Disponibilidad", value: "Trainee / Jr. (Remoto / Híbrido)" }
@@ -250,7 +250,7 @@
       title: "Analista Programador Universitario",
       institution: "Universidad Nacional de La Plata (UNLP)",
       location: "La Plata, Buenos Aires, Argentina",
-      status: "Carrera Universitaria en Curso",
+      status: "1° Año en Curso",
       isCompleted: true,
       desc: "Formación universitaria de grado en ciencias de la computación: fundamentos de programación estructurada y orientada a objetos, diseño y análisis de algoritmos, lógica computacional, estructuras de datos y metodologías de desarrollo.",
       badgeColor: "#7C4DFF"
