@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import {
   User,
   Cpu,
@@ -55,7 +55,11 @@ import {
   Edit3,
   PenTool,
   Lightbulb,
-  Zap
+  Zap,
+  Database,
+  Shield,
+  Printer,
+  Table
 } from 'lucide-react';
 
 const iconMap = {
@@ -114,13 +118,13 @@ const iconMap = {
   PackageCheck,
   TrendingUp,
   SlidersHorizontal,
-  X
+  X,
+  Database,
+  Shield,
+  Printer,
+  Table
 };
 
-/**
- * Uniform Icon Component ensuring identical sizing and stroke across the portfolio
- * Standard size: 20px (w-5 h-5) or customizable
- */
 export default function Icon({ name, size = 20, className = '', strokeWidth = 2, ...props }) {
   const Component = iconMap[name] || Code;
   return (

@@ -1,36 +1,38 @@
-export const portfolioData = {
+﻿export const portfolioData = {
   personal: {
     name: "Alejo Ezequiel",
     lastName: "Sosa",
     fullName: "Alejo Ezequiel Sosa",
     initials: "AES",
-    role: "Desarrollador Web & Especialista en Agentes IA",
-    headline: "DESARROLLANDO EXPERIENCIAS WEB INTELIGENTES, ESCALABLES Y DE ALTO IMPACTO",
-    tagline: "Especializado en JavaScript, Java, React, NodeJS e integración práctica de Agentes de Inteligencia Artificial.",
+    role: "Desarrollador Web Jr. | Estudiante UNLP | IA & Bases de Datos",
+    headline: "DESARROLLANDO EXPERIENCIAS WEB INTELIGENTES, ESCALABLES Y CON RIGOR ANALÍTICO",
+    tagline: "Estudiante de Analista Programador Universitario (UNLP) especializado en Desarrollo Web, SQL y aceleración con Agentes de IA.",
     location: "Berisso, Buenos Aires, Argentina",
-    email: "alejoezequiel9999@gmail.com",
+    email: "alejoezequiel99@hotmail.com",
+    emailAlt: "alejoezequiel9999@gmail.com",
     github: "https://github.com/alejoezequiel99",
-    linkedin: "https://www.linkedin.com/in/alejo-sosa",
-    educationPrimary: "Programador Web con Agentes IA - CFL 404 Berisso",
-    bio: "Soy desarrollador web apasionado por crear interfaces modernas, sistemas ágiles y soluciones de alto rendimiento con sede en Berisso, Buenos Aires. Combino el poder de tecnologías consolidadas (JavaScript, Java, React, NodeJS, Tailwind, Docker, Git) con el potencial de la Inteligencia Artificial y agentes autónomos para resolver problemas reales con excelencia visual y arquitectura limpia.",
+    linkedin: "https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/",
+    phone: "+54 221 428 5618",
+    whatsapp: "https://wa.me/542214285618",
+    educationPrimary: "Analista Programador Universitario (UNLP) & CFL 404 Berisso",
+    bio: "Soy desarrollador web y estudiante de Analista Programador Universitario en la Universidad Nacional de La Plata (UNLP). Combino una sólida base en ciencias de la computación (algoritmos, lógica formal y estructuras de datos) con el desarrollo web moderno (JavaScript, React, Astro, Tailwind, NodeJS) y la aceleración mediante Agentes de Inteligencia Artificial (Cursor, Claude, OpenAI APIs). Cuento además con experiencia en el Ministerio de Seguridad de la PBA gestionando información sensible bajo rigurosos estándares de confidencialidad, integridad de datos y responsabilidad institucional.",
     stats: [
-      { label: "Ubicación", value: "Berisso, Bs. As., Argentina" },
-      { label: "Enfoque Core", value: "Web & Agentes IA" },
-      { label: "Estilo Visual", value: "Neumorphism Violet" },
-      { label: "Disponibilidad", value: "Proyectos & Colaboración" }
+      { label: "Universidad", value: "UNLP (Analista Programador)" },
+      { label: "Ubicación", value: "Berisso / La Plata, Arg." },
+      { label: "Enfoque Core", value: "Web Dev, SQL & Agentes IA" },
+      { label: "Disponibilidad", value: "Trainee / Jr. (Remoto / Híbrido)" }
     ]
   },
 
   navigationSections: [
     { id: "datos-personales", label: "Información", number: "00", icon: "User", desc: "Perfil, ubicación y contacto" },
     { id: "skills", label: "01 Skills", number: "01", icon: "Cpu", desc: "Lenguajes, Tech, IA y Soft Skills" },
-    { id: "experiencia", label: "02 Experiencia", number: "02", icon: "Briefcase", desc: "Trabajos hechos y en proceso" },
-    { id: "proyectos", label: "Proyectos", number: "03", icon: "Layers", desc: "Portfolio & FDD Stock" },
-    { id: "certificaciones", label: "03 Certificaciones", number: "04", icon: "Award", desc: "CFL 404, FCC, Mercado Pago" },
+    { id: "experiencia", label: "02 Experiencia", number: "02", icon: "Briefcase", desc: "Trayectoria laboral y proyectos" },
+    { id: "proyectos", label: "Proyectos", number: "03", icon: "Layers", desc: "Fútbol en vivo, FDD, Redes e IA" },
+    { id: "certificaciones", label: "03 Formación", number: "04", icon: "Award", desc: "UNLP, CFL 404, FCC, Mercado Pago" },
     { id: "contacto", label: "Contacto & CV", number: "05", icon: "Mail", desc: "Formulario, descarga PDF y redes" },
   ],
 
-  // Elementos interactivos del blueprint (correspondientes a los cuadros de la imagen)
   blueprintElements: [
     {
       id: "pencil-box",
@@ -38,7 +40,7 @@ export const portfolioData = {
       title: "Información Personal",
       tool: "Lápiz [Edición]",
       icon: "Edit3",
-      desc: "Alejo Ezequiel Sosa • Berisso, Bs. As., Argentina • Perfil profesional",
+      desc: "Alejo Ezequiel Sosa • Berisso, Bs. As. • Perfil y datos",
       badge: "00 // SOBRE MÍ"
     },
     {
@@ -47,7 +49,7 @@ export const portfolioData = {
       title: "01 Skills & Tecnologías",
       tool: "Lámpara [Ideas]",
       icon: "Sparkles",
-      desc: "JavaScript, Java, React, NodeJS, Docker, Git, CSS y Agentes IA",
+      desc: "JavaScript, React, SQL, Astro, Tailwind, Agentes IA",
       badge: "01 // SKILLS"
     },
     {
@@ -56,7 +58,7 @@ export const portfolioData = {
       title: "02 Experiencia",
       tool: "Galería [Montaña]",
       icon: "Briefcase",
-      desc: "Trabajos hechos y proyectos en proceso de desarrollo activo",
+      desc: "Min. de Seguridad PBA, Matéu Sports y desarrollo de software",
       badge: "02 // EXPERIENCIA"
     },
     {
@@ -65,17 +67,17 @@ export const portfolioData = {
       title: "Trabajos & Proyectos",
       tool: "</> Portfolio [Código]",
       icon: "Layers",
-      desc: "Portfolio Interactivo y FDD: Forward Design Developer",
+      desc: "Fútbol en Vivo, FDD Stock, Red Institucional y Portfolio",
       badge: "03 // PROYECTOS"
     },
     {
       id: "type-box",
       targetId: "certificaciones",
-      title: "03 Certificaciones",
+      title: "03 Formación & Títulos",
       tool: "Tipografía [T]",
       icon: "Award",
-      desc: "CFL 404 Berisso, FreeCodeCamp y Mercado Pago Developers",
-      badge: "04 // CERTIFICACIONES"
+      desc: "UNLP, CFL 404 Berisso, FreeCodeCamp y Mercado Pago",
+      badge: "04 // FORMACIÓN"
     },
     {
       id: "wireframes-box",
@@ -83,7 +85,7 @@ export const portfolioData = {
       title: "Contacto & Descarga CV",
       tool: "Wireframes Base",
       icon: "Mail",
-      desc: "Formulario interactivo, CV PDF y enlaces a redes oficiales",
+      desc: "Descarga PDF oficial, WhatsApp, LinkedIn y email",
       badge: "05 // CONTACTO"
     }
   ],
@@ -92,33 +94,35 @@ export const portfolioData = {
   skills: {
     programmingLanguages: [
       { name: "JavaScript", level: "Avanzado", tag: "ES6+ / Async / DOM / APIs / Clean Code", icon: "Code" },
-      { name: "Java", level: "Intermedio / Sólido", tag: "POO / Backend / Algoritmos / Arquitectura", icon: "Terminal" },
+      { name: "SQL", level: "Intermedio / Sólido", tag: "Consultas / Modelado Relacional / Integridad", icon: "Database" },
+      { name: "Java", level: "Fundamentos UNLP", tag: "POO / Algoritmos / Lógica de Programación", icon: "Terminal" },
     ],
     technologies: [
       { name: "React", level: "Avanzado", tag: "Hooks / SPA / Componentes / State", icon: "Atom" },
-      { name: "NodeJS", level: "Intermedio / Avanzado", tag: "Express / APIs REST / Backend", icon: "Server" },
       { name: "Tailwind CSS", level: "Avanzado", tag: "Neumorphism / Responsive UI / Modern CSS", icon: "Palette" },
-      { name: "Docker", level: "Intermedio", tag: "Contenedores / Ambientes / Deploy", icon: "Box" },
+      { name: "Astro", level: "Intermedio", tag: "Arquitectura por componentes / Alto Rendimiento", icon: "Sparkles" },
+      { name: "NodeJS", level: "Intermedio", tag: "Express / APIs REST / Backend", icon: "Server" },
+      { name: "PostgreSQL & SQLite", level: "Intermedio", tag: "Persistencia de datos / Esquemas relacionales", icon: "Database" },
       { name: "Git & GitHub", level: "Avanzado", tag: "Control de versiones / CI-CD / Colaboración", icon: "GitBranch" },
-      { name: "CSS / Modern CSS", level: "Avanzado", tag: "Flexbox / Grid / Animaciones / Neumorphism", icon: "Layout" },
+      { name: "MS Access & Excel", level: "Avanzado", tag: "Gestión de datos institucionales / Auditoría", icon: "Table" },
     ],
     aiAndAgenticTools: [
-      { name: "Agentes IA Autónomos", desc: "Orquestación de agentes inteligentes para resolución de tareas y generación asistida de software.", icon: "Bot" },
-      { name: "Prompt Engineering", desc: "Diseño y optimización de prompts técnicos de alta precisión para modelos de lenguaje.", icon: "Sparkles" },
-      { name: "Agentic Workflows", desc: "Automatización de flujos de código, testing inteligente y optimización de productividad.", icon: "Workflow" },
-      { name: "Integración de LLMs", desc: "Conexión de modelos de lenguaje en plataformas y aplicaciones web interactivas.", icon: "Cpu" }
+      { name: "Agentes IA Autónomos & Asistidos", desc: "Uso de Cursor, Claude y OpenAI para desarrollo acelerado y refactorización.", icon: "Bot" },
+      { name: "Prompt Engineering Técnico", desc: "Diseño y estructuración de instrucciones de alta fidelidad para modelos de lenguaje.", icon: "Sparkles" },
+      { name: "Optimización de Consultas SQL con IA", desc: "Generación y depuración asistida de esquemas y queries de alto rendimiento.", icon: "Database" },
+      { name: "Agentic Workflows", desc: "Automatización de flujos de desarrollo, validación y prototipado ágil.", icon: "Workflow" }
     ],
     languages: [
       { name: "Español", level: "Nativo", desc: "Comunicación fluida y profesional nativa", icon: "Globe" },
-      { name: "Inglés", level: "Técnico", desc: "Lectura fluida de documentación, especificaciones técnicas y APIs", icon: "Languages" }
+      { name: "Inglés", level: "Técnico / Básico", desc: "Lectura de documentación, especificaciones técnicas y APIs", icon: "Languages" }
     ],
     personalQualities: [
-      { title: "Resolutivo", desc: "Capacidad analítica para desglosar problemas complejos y materializar soluciones eficientes.", icon: "CheckCircle2" },
-      { title: "Proactivo", desc: "Iniciativa constante para proponer mejoras técnicas, optimizaciones y anticipar necesidades.", icon: "Flame" },
-      { title: "Autodidacta", desc: "Hábito constante de estudio e incorporación veloz de nuevas herramientas y estándares.", icon: "Compass" },
-      { title: "Detallista", desc: "Obsesión por la estética limpia, la fidelidad de diseño neumórfico y el código prolijo.", icon: "Sparkle" },
-      { title: "Colaborativo", desc: "Facilidad de integración en equipos de desarrollo, comunicación asertiva y recepción de feedback.", icon: "Users" },
-      { title: "Innovador", desc: "Aprovechamiento de la vanguardia de la IA y agentes para construir productos diferenciales.", icon: "Brain" }
+      { title: "Responsabilidad Institucional", desc: "Experiencia en manejo confidencial de información sensible y cumplimiento estricto de normas.", icon: "Shield" },
+      { title: "Rigor Analítico", desc: "Formación universitaria en UNLP enfocada en algoritmos, lógica y resolución metódica.", icon: "CheckCircle2" },
+      { title: "Proactivo & Resolutivo", desc: "Iniciativa constante para proponer mejoras técnicas y optimizar procesos de trabajo.", icon: "Flame" },
+      { title: "Aprendizaje Continuo", desc: "Rápida adaptación e incorporación de nuevas tecnologías, frameworks y herramientas de IA.", icon: "Compass" },
+      { title: "Colaborativo", desc: "Excelente comunicación, trabajo en equipo y recepción constructiva de feedback.", icon: "Users" },
+      { title: "Orientado al Detalle", desc: "Compromiso con el código limpio, interfaces prolijas y arquitecturas escalables.", icon: "Brain" }
     ]
   },
 
@@ -126,103 +130,139 @@ export const portfolioData = {
   experience: {
     completedWork: [
       {
-        title: "Portfolio Web Neumórfico Interactivo",
-        role: "Desarrollador Web & UI Designer",
-        period: "2026",
-        desc: "Diseño y desarrollo integral de portafolio web personal con hub de navegación central en laptop, mapas de interacción blueprint y estética neumórfica en gama violeta de alta fidelidad.",
-        tags: ["React", "Tailwind CSS", "Neumorphism", "Framer Motion", "Vite"]
+        title: "Gestión de Datos & Tratamiento Documental Institucional",
+        role: "Oficial de Policía Administrativo - Min. de Seguridad PBA",
+        period: "2022 – Actualidad",
+        desc: "Gestión administrativa y tratamiento riguroso de documentación institucional bajo estrictas normas de confidencialidad. Operación continua de bases de datos internas, Access y Excel avanzado para carga, control y auditoría de expedientes. Resolución metódica de procedimientos bajo alta exigencia institucional.",
+        tags: ["Seguridad de la Información", "MS Access", "Excel Avanzado", "Bases de Datos", "Confidencialidad"]
       },
       {
-        title: "Desarrollo de Módulos Web & Agentes IA",
+        title: "Operaciones de Stock, Facturación y Sistemas Comerciales",
+        role: "Vendedor / Cajero / Control de Stock - Matéu Sports S.A.",
+        period: "2019 – 2022",
+        desc: "Operación de software comercial interno para gestión de inventario, registro de productos vendidos, arqueo de caja y facturación. Manejo de tareas simultáneas en entorno comercial dinámico de alto volumen y orientación al usuario.",
+        tags: ["Sistemas POS/ERP", "Control de Stock", "Facturación", "Atención al Usuario", "Trabajo en Equipo"]
+      },
+      {
+        title: "Desarrollo de Módulos Web & Agentes de IA",
         role: "Programador Web - CFL 404 Berisso",
-        period: "2025 - 2026",
-        desc: "Desarrollo de módulos funcionales para la web integrando APIs y agentes de inteligencia artificial para agilizar consultas, estructurar bases de datos y resolver requerimientos prácticos.",
-        tags: ["JavaScript", "Java", "Agentes IA", "NodeJS", "APIs REST"]
-      },
-      {
-        title: "Interfaces Reactivas & Prototipos UI Neumórficos",
-        role: "Desarrollo Independiente",
-        period: "2024 - 2025",
-        desc: "Construcción de interfaces dinámicas en React con sistemas táctiles de relieve y sombras suaves neumórficas, formularios interactivos y navegación fluida.",
-        tags: ["React", "Tailwind", "CSS Moderno", "Git"]
+        period: "2025 – 2026",
+        desc: "Construcción de módulos funcionales para la web integrando bases de datos relacionales (SQLite / SQL) y herramientas de desarrollo asistido con modelos LLM para optimizar consultas y flujos de software.",
+        tags: ["HTML5", "CSS3", "JavaScript", "SQL", "SQLite", "Agentes IA"]
       }
     ],
     inProgressWork: [
       {
-        title: "FDD: Forward Design Developer",
+        title: "Plataforma Web de Estadísticas y Fútbol en Vivo",
+        role: "Desarrollador Web",
+        period: "En Desarrollo Activo",
+        desc: "Plataforma dinámica dedicada al fútbol mundial inspirada en plataformas como Flashscore/Sofascore. Consulta en vivo de partidos, marcadores en tiempo real, tablas de posiciones y estadísticas por liga, construida con Astro, Tailwind CSS y PostgreSQL.",
+        status: "En desarrollo activo",
+        tags: ["Astro", "Tailwind CSS", "PostgreSQL", "TypeScript", "Lucide Icons"]
+      },
+      {
+        title: "FDD: Forward Design Developer & Stock",
         role: "Creador & Desarrollador Principal",
         period: "En Desarrollo Activo",
-        desc: "Sistema interactivo para respuesta inmediata de stock e inventario: '¿Qué cantidad vende? ¿Qué números tiene en stock?'. Con panel de consulta ágil y métricas en tiempo real.",
+        desc: "Sistema interactivo para respuesta inmediata de stock e inventario: '¿Qué cantidad vende? ¿Qué números tiene en stock?'. Panel de consulta ágil y métricas en tiempo real con estética neumórfica.",
         status: "En desarrollo activo",
         tags: ["React", "NodeJS", "Stock Logic", "Neumorphism", "AI Search"]
       },
       {
-        title: "Integración de Pasarelas Mercado Pago Developers",
-        role: "Desarrollador Integrador",
-        period: "En Proceso",
-        desc: "Implementación y testeo de flujos de pago con Checkout Pro, Checkout API y Webhooks oficiales de Mercado Pago para plataformas de venta digital.",
-        status: "En curso",
-        tags: ["Mercado Pago SDK", "NodeJS", "JavaScript", "Webhooks"]
-      },
-      {
-        title: "Especialización Avanzada FreeCodeCamp",
-        role: "Estudiante & Developer",
-        period: "En Curso",
-        desc: "Perfeccionamiento continuo en estructuras de datos avanzadas, algoritmos en JavaScript y aplicaciones full stack según el currículum de freecodecamp.org.",
-        status: "En curso",
-        tags: ["FreeCodeCamp", "JavaScript", "Algoritmos", "Certificación"]
+        title: "Red Interna Institucional & Acceso IP Privado",
+        role: "Proyecto de Infraestructura & Seguridad",
+        period: "Completado / Documentado",
+        desc: "Diseño e implementación de arquitectura de red interna con direccionamiento IPv4 privado segmentado para dependencias institucionales, garantizando aislamiento de tráfico y control de accesos perimetrales.",
+        status: "Implementado",
+        tags: ["Redes LAN", "IPv4 Privado", "Seguridad Perimetral", "Segmentación"]
       }
     ]
   },
 
-  // PROYECTOS (Portfolio y FDD)
+  // 03 PROYECTOS DESTACADOS
   projects: [
+    {
+      id: "football-project",
+      title: "Plataforma Web de Fútbol en Vivo & Estadísticas",
+      subtitle: "Resultados en Tiempo Real, Clasificaciones y Persistencia Relacional",
+      badge: "PROYECTO WEB & DATOS",
+      description: "Plataforma web dinámica orientada a la consulta en tiempo real de resultados de fútbol mundial, tablas de posiciones y estadísticas por torneo. Diseñada con arquitectura desacoplada en Astro, estilado con Tailwind CSS y persistencia en PostgreSQL.",
+      methodology: {
+        what: "Visualización de marcadores en directo, agenda de partidos, clasificaciones por país y liga, con actualización ágil y bajo consumo de recursos.",
+        where: "Desarrollado con arquitectura moderna de componentes, routing optimizado y preparado para consumo de APIs deportivas en vivo.",
+        how: "Stack: Astro 5, Tailwind CSS, PostgreSQL, TypeScript y Lucide Icons.",
+        when: "En desarrollo y evolución continua 2026."
+      },
+      tags: ["Astro", "Tailwind CSS", "PostgreSQL", "TypeScript", "APIs REST"],
+      githubUrl: "https://github.com/alejoezequiel99"
+    },
     {
       id: "fdd-project",
       title: "FDD: Forward Design Developer",
       subtitle: "Sistema Inteligente de Consulta de Stock & Cantidad Vendida",
-      badge: "PROYECTO DESTACADO",
-      description: "Plataforma diseñada para responder al instante: ¿Qué cantidad vende? ¿Qué números tiene en stock? Organiza y visibiliza métricas de productos con claridad total.",
+      badge: "SISTEMA DE GESTIÓN",
+      description: "Plataforma interactiva diseñada para responder al instante: ¿Qué cantidad vende? ¿Qué números tiene en stock? Organiza y visibiliza métricas de productos con claridad total e interfaz táctil neumórfica.",
       methodology: {
-        what: "Muestra la cantidad vendida por producto y período, unidades exactas en stock, alertas de inventario crítico y consulta rápida mediante lenguaje natural asistido por IA.",
-        where: "Orden de la data optimizado: Métricas clave (KPIs) en la parte superior, buscador dinámico en el centro, y tabla desglosada con gráficos de rotación a la vista.",
-        how: "Implementado con estética Neumorphism violeta táctil. Stack: React, NodeJS, Tailwind CSS, sombras suaves y acentos vibrantes.",
-        when: "Evolución por fases: Fase 1 (Prototipo y UI completa) ✓ | Fase 2 (Lógica de stock y analíticas en tiempo real) [En curso] | Fase 3 (Pasarela de pagos y sincronización)"
+        what: "Muestra la cantidad vendida por producto y período, unidades exactas en stock, alertas de inventario crítico y consulta ágil.",
+        where: "KPIs en la parte superior, buscador dinámico en el centro y tabla desglosada con gráficos de rotación a la vista.",
+        how: "Implementado con estética Neumorphism violeta táctil. Stack: React, NodeJS, Tailwind CSS.",
+        when: "Fase 1 completada, integrando analíticas en tiempo real."
       },
       tags: ["React", "NodeJS", "Stock & Ventas", "Neumorphism", "Agentes IA"],
-      liveStockDemo: [
-        { product: "Zapatillas Urbanas Neo V1", stock: 42, sold: 128, status: "Alto Stock" },
-        { product: "Remera Oversize Cotton Tech", stock: 8, sold: 215, status: "Stock Crítico" },
-        { product: "Buzo Hoodie Minimal Violet", stock: 24, sold: 95, status: "Stock Normal" },
-        { product: "Pantalón Cargo Tactical", stock: 15, sold: 74, status: "Stock Normal" },
-      ]
+      githubUrl: "https://github.com/alejoezequiel99"
+    },
+    {
+      id: "network-project",
+      title: "Red Interna Institucional & IPs Privadas",
+      subtitle: "Infraestructura de Red, Segmentación y Seguridad Perimetral",
+      badge: "INFRAESTRUCTURA & SEGURIDAD",
+      description: "Diseño e implementación de arquitectura de red interna para un ámbito institucional, utilizando direccionamiento IP privado segmentado, control de accesos y aislamiento perimetral para dependencias administrativas.",
+      methodology: {
+        what: "Esquema de subredes privadas para garantizar integridad y confidencialidad de la información entre diferentes áreas operativas.",
+        where: "Entorno institucional con requerimientos de alta disponibilidad y tolerancia a fallas.",
+        how: "Topología LAN, direccionamiento IPv4 clase privada, políticas de seguridad perimetral.",
+        when: "Desarrollo técnico institucional documentado."
+      },
+      tags: ["Redes LAN", "IPv4 Privado", "Seguridad Perimetral", "Auditoría"],
+      githubUrl: "https://github.com/alejoezequiel99"
     },
     {
       id: "portfolio-alejo",
-      title: "Portfolio Interactivo Alejo Ezequiel Sosa",
+      title: "Portfolio Interactivo Neumórfico",
       subtitle: "Centro de Navegación con Laptop Central & Blueprint Neumórfico",
       badge: "PORTFOLIO PERSONAL",
-      description: "Portfolio web construido desde cero con arquitectura modular, diseño inspirado en el blueprint de desarrollo interactivo donde la computadora en el centro conecta cada cuadro a su sector.",
+      description: "Portfolio web construido desde cero con arquitectura modular, diseño inspirado en el blueprint de desarrollo interactivo donde la computadora en el centro conecta cada cuadro a su sector, con CV descargable en PDF y modo táctil.",
       methodology: {
-        what: "Presentación integral de datos personales, experiencia, proyectos, habilidades técnicas con agentes IA y certificaciones oficiales.",
-        where: "Hero interactivo con laptop central conectada a cada sección mediante botones que se iluminan al pasar el cursor y hacen scroll automático, seguido de secciones modulares.",
-        how: "Gama de colores fiel al blueprint violeta original (#4F20D2, #7C4DFF, #A78BFA). Estilo Neumorphism con iconos normalizados al mismo tamaño.",
-        when: "Lanzamiento oficial 2026."
+        what: "Presentación integral de perfil profesional, experiencia institucional, formación universitaria en la UNLP y proyectos.",
+        where: "Hero interactivo con laptop central conectada a cada sección mediante navegación fluida.",
+        how: "Gama violeta neumórfica (#4F20D2, #7C4DFF, #A78BFA) desarrollada en React, Tailwind CSS y Vite.",
+        when: "Desplegado en GitHub Pages 2026."
       },
-      tags: ["React", "Tailwind CSS", "Neumorphism", "Framer Motion", "Vite"]
+      tags: ["React", "Tailwind CSS", "Neumorphism", "Framer Motion", "Vite"],
+      githubUrl: "https://github.com/alejoezequiel99/portfolio"
     }
   ],
 
-  // 03 CERTIFICACIONES
+  // 04 FORMACIÓN & CERTIFICACIONES
   certifications: [
     {
+      id: "unlp-cs",
+      title: "Analista Programador Universitario",
+      institution: "Universidad Nacional de La Plata (UNLP)",
+      location: "La Plata, Buenos Aires, Argentina",
+      status: "Carrera Universitaria en Curso",
+      isCompleted: true,
+      desc: "Formación universitaria de grado en ciencias de la computación: fundamentos de programación estructurada y orientada a objetos, diseño y análisis de algoritmos, lógica computacional, estructuras de datos y metodologías de desarrollo.",
+      badgeColor: "#7C4DFF"
+    },
+    {
       id: "cfl-404",
-      title: "Programador Web con Agentes IA",
+      title: "Programador Web con Agentes IA y Base de Datos",
       institution: "Centro de Formación Laboral (CFL) 404 Berisso",
       location: "Berisso, Buenos Aires, Argentina",
       status: "Certificación Oficial Obtenida",
       isCompleted: true,
-      desc: "Formación especializada en programación web full stack, lógica de algoritmos, JavaScript moderno, backend y la integración práctica de agentes de Inteligencia Artificial para potenciar el desarrollo de software.",
+      desc: "Formación especializada en desarrollo web (HTML5, CSS3, JavaScript), bases de datos relacionales (SQL, SQLite) y la aplicación práctica de agentes de Inteligencia Artificial para aceleración y validación de software.",
       badgeColor: "#7C4DFF"
     },
     {
@@ -230,9 +270,9 @@ export const portfolioData = {
       title: "Full Stack & Algoritmos JavaScript",
       institution: "FreeCodeCamp",
       website: "freecodecamp.org",
-      status: "Curso para Realizar",
+      status: "Especialización Continua",
       isCompleted: false,
-      desc: "Especialización en desarrollo web responsive, algoritmos avanzados, manipulación de estructuras de datos y resolución de desafíos lógicos en JavaScript según el currículum oficial de freecodecamp.org.",
+      desc: "Perfeccionamiento en desarrollo web responsive, algoritmos avanzados, manipulación de estructuras de datos complejas y proyectos frontend/full stack.",
       badgeColor: "#A78BFA"
     },
     {
@@ -240,9 +280,9 @@ export const portfolioData = {
       title: "Mercado Pago Developers",
       institution: "Mercado Pago",
       website: "mercadopago.com.ar/developers",
-      status: "Curso para Realizar",
+      status: "Especialización en Pasarelas de Pago",
       isCompleted: false,
-      desc: "Capacitación oficial en integración de soluciones de cobro digital: Checkout Pro, Checkout API, gestión de transacciones seguras y configuración de webhooks en entornos web.",
+      desc: "Capacitación en integración de Checkout Pro, Checkout API, gestión de cobros digitales, transacciones seguras y configuración de webhooks.",
       badgeColor: "#7C4DFF"
     }
   ],
@@ -250,11 +290,14 @@ export const portfolioData = {
   // Contacto y Redes
   contact: {
     name: "Alejo Ezequiel Sosa",
-    location: "Berisso, Buenos Aires, Argentina",
-    email: "alejoezequiel9999@gmail.com",
+    location: "Berisso / La Plata, Buenos Aires, Argentina",
+    email: "alejoezequiel99@hotmail.com",
+    emailAlt: "alejoezequiel9999@gmail.com",
     githubUrl: "https://github.com/alejoezequiel99",
-    linkedinUrl: "https://www.linkedin.com/in/alejo-sosa",
-    phone: "+54 9 221 (Disponible por consulta)",
-    ctaCV: "Descargar CV (PDF)"
+    linkedinUrl: "https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/",
+    whatsappUrl: "https://wa.me/542214285618",
+    phone: "+54 221 428 5618",
+    ctaCV: "Descargar CV Oficial (PDF)",
+    cvPdfPath: "cv/CV_Alejo_Ezequiel_Sosa.pdf"
   }
 };

@@ -1,4 +1,4 @@
-import React from 'react';
+﻿import React from 'react';
 import { portfolioData } from '../data/portfolioData';
 import Icon from './Icon';
 import { motion } from 'framer-motion';
@@ -6,7 +6,8 @@ import { motion } from 'framer-motion';
 export default function PersonalInfo({ onOpenCV }) {
   const { personal } = portfolioData;
 
-  const techList = ['React', 'NodeJS', 'Tailwind', 'Docker', 'Git', 'CSS'];
+  const techList = ['React', 'Astro', 'Tailwind', 'SQL', 'PostgreSQL', 'NodeJS', 'Git'];
+  const pdfUrl = `${import.meta.env.BASE_URL}cv/CV_Alejo_Ezequiel_Sosa.pdf`;
 
   return (
     <section id="datos-personales" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
@@ -23,7 +24,7 @@ export default function PersonalInfo({ onOpenCV }) {
           </h2>
         </div>
         <p className="text-xs sm:text-sm font-mono text-purple-200 max-w-md">
-          Ubicación, perfil técnico, formación y visión del desarrollo web moderno con agentes de IA.
+          Ubicación, perfil técnico, formación universitaria y visión del desarrollo web moderno con agentes de IA.
         </p>
       </div>
 
@@ -50,7 +51,7 @@ export default function PersonalInfo({ onOpenCV }) {
             <div>
               <span className="text-xs font-mono font-bold text-[#DDD6FE] uppercase flex items-center gap-1.5">
                 <Icon name="Edit3" size={13} className="text-[#A78BFA]" />
-                DESARROLLADOR WEB
+                DESARROLLADOR WEB JR.
               </span>
               <h3 className="text-2xl font-black text-white leading-tight">
                 {personal.name} {personal.lastName}
@@ -62,21 +63,21 @@ export default function PersonalInfo({ onOpenCV }) {
             </div>
           </div>
 
-          {/* Quick Technical Specs Grid - Perfectly uniform, well spaced & readable */}
+          {/* Quick Technical Specs Grid */}
           <div className="space-y-3 pt-2 border-t border-purple-400/20 mb-6">
             
             {/* 1. Estudios */}
             <div className="p-3.5 rounded-xl neu-inset">
               <span className="text-[11px] font-mono text-purple-300 font-bold flex items-center gap-2 mb-1.5 uppercase">
                 <Icon name="Award" size={16} className="text-[#A78BFA]" />
-                Estudios
+                Formación
               </span>
-              <div className="pl-6">
+              <div className="pl-6 space-y-1">
                 <p className="text-xs font-bold text-white leading-tight">
-                  CFL 404 Berisso
+                  UNLP • Analista Programador Universitario
                 </p>
-                <p className="text-[11px] font-mono text-[#DDD6FE] mt-0.5">
-                  Programador Web con Agentes IA
+                <p className="text-[11px] font-mono text-[#DDD6FE]">
+                  CFL 404 • Programador Web con Agentes IA & SQL
                 </p>
               </div>
             </div>
@@ -85,11 +86,14 @@ export default function PersonalInfo({ onOpenCV }) {
             <div className="p-3.5 rounded-xl neu-inset">
               <span className="text-[11px] font-mono text-purple-300 font-bold flex items-center gap-2 mb-2 uppercase">
                 <Icon name="Code" size={16} className="text-[#A78BFA]" />
-                Lenguajes Core
+                Lenguajes & Bases de Datos
               </span>
               <div className="flex flex-wrap gap-2 pl-6">
                 <span className="px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-400/30 text-xs font-mono font-bold text-white shadow-sm">
-                  JavaScript
+                  JavaScript (ES6+)
+                </span>
+                <span className="px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-400/30 text-xs font-mono font-bold text-white shadow-sm">
+                  SQL Relacional
                 </span>
                 <span className="px-3 py-1 rounded-lg bg-purple-950/80 border border-purple-400/30 text-xs font-mono font-bold text-white shadow-sm">
                   Java
@@ -101,7 +105,7 @@ export default function PersonalInfo({ onOpenCV }) {
             <div className="p-3.5 rounded-xl neu-inset">
               <span className="text-[11px] font-mono text-purple-300 font-bold flex items-center gap-2 mb-2 uppercase">
                 <Icon name="Atom" size={16} className="text-[#A78BFA]" />
-                Tecnologías
+                Tecnologías & Frameworks
               </span>
               <div className="flex flex-wrap gap-2 pl-6">
                 {techList.map((tech) => (
@@ -119,11 +123,11 @@ export default function PersonalInfo({ onOpenCV }) {
             <div className="p-3.5 rounded-xl neu-inset">
               <span className="text-[11px] font-mono text-purple-300 font-bold flex items-center gap-2 mb-2 uppercase">
                 <Icon name="Bot" size={16} className="text-[#A78BFA]" />
-                Enfoque AI
+                Enfoque AI & Productividad
               </span>
               <div className="flex flex-wrap gap-2 pl-6">
                 <span className="px-2.5 py-1 rounded-lg bg-purple-950/80 border border-purple-400/30 text-xs font-mono font-semibold text-emerald-300 shadow-sm">
-                  Agentes IA
+                  Agentes IA (Cursor, Claude)
                 </span>
                 <span className="px-2.5 py-1 rounded-lg bg-purple-950/80 border border-purple-400/30 text-xs font-mono font-semibold text-emerald-300 shadow-sm">
                   Prompt Engineering
@@ -133,31 +137,41 @@ export default function PersonalInfo({ onOpenCV }) {
 
           </div>
 
-          {/* Action CTAs: CV & GitHub */}
+          {/* Action CTAs: CV, GitHub & LinkedIn */}
           <div className="space-y-2.5">
-            <button
-              onClick={onOpenCV}
-              className="w-full neu-btn-primary py-3 rounded-2xl text-xs font-black flex items-center justify-center gap-2 uppercase tracking-wide"
+            <a
+              href={pdfUrl}
+              download="CV_Alejo_Ezequiel_Sosa.pdf"
+              className="w-full neu-btn-primary py-3 rounded-2xl text-xs font-black flex items-center justify-center gap-2 uppercase tracking-wide text-center"
             >
               <Icon name="Download" size={16} />
               <span>DESCARGAR CV OFICIAL (PDF)</span>
-            </button>
-            <a
-              href={personal.github}
-              target="_blank"
-              rel="noreferrer"
-              className="w-full neu-btn py-2.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-2 uppercase tracking-wide hover:text-white transition-all"
-            >
-              <Icon name="Github" size={16} className="text-[#A78BFA]" />
-              <span>PERFIL GITHUB: @alejoezequiel99</span>
             </a>
+            <div className="grid grid-cols-2 gap-2">
+              <a
+                href={personal.github}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full neu-btn py-2.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 uppercase tracking-wide hover:text-white transition-all"
+              >
+                <Icon name="Github" size={15} className="text-[#A78BFA]" />
+                <span>GITHUB</span>
+              </a>
+              <a
+                href={personal.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="w-full neu-btn py-2.5 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 uppercase tracking-wide hover:text-white transition-all text-blue-300"
+              >
+                <Icon name="Linkedin" size={15} className="text-blue-400" />
+                <span>LINKEDIN</span>
+              </a>
+            </div>
           </div>
         </motion.div>
 
         {/* Right Column: Bio & Core Attributes (Neumorphic) */}
         <div className="lg:col-span-7 space-y-6">
-          
-          {/* Main Bio Card */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
@@ -173,7 +187,7 @@ export default function PersonalInfo({ onOpenCV }) {
             </div>
 
             <h3 className="text-xl sm:text-2xl font-black text-white leading-snug mb-4">
-              "Construyendo experiencias web modernas que combinan potencia técnica, agilidad y visión de futuro."
+              "Construyendo experiencias web modernas que combinan potencia técnica, agilidad analítica y visión de futuro."
             </h3>
 
             <p className="text-sm sm:text-base text-purple-100 leading-relaxed font-normal mb-6">
@@ -194,7 +208,6 @@ export default function PersonalInfo({ onOpenCV }) {
               ))}
             </div>
           </motion.div>
-
         </div>
 
       </div>

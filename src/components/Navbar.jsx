@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+﻿import React, { useState, useEffect, useRef } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import Icon from './Icon';
 
@@ -12,15 +12,12 @@ export default function Navbar({ onOpenCV }) {
   useEffect(() => {
     const handleScroll = () => {
       const currentY = window.scrollY;
-      // Siempre visible en el hero (primeros 80px)
       if (currentY < 80) {
         setVisible(true);
       } else if (currentY > lastScrollY.current + 5) {
-        // Scrolleando hacia abajo → ocultar
         setVisible(false);
         setMobileMenuOpen(false);
       } else if (currentY < lastScrollY.current - 5) {
-        // Scrolleando hacia arriba → mostrar
         setVisible(true);
       }
       lastScrollY.current = currentY;
@@ -39,6 +36,8 @@ export default function Navbar({ onOpenCV }) {
       element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
+
+  const pdfUrl = `${import.meta.env.BASE_URL}cv/CV_Alejo_Ezequiel_Sosa.pdf`;
 
   return (
     <header
@@ -66,7 +65,7 @@ export default function Navbar({ onOpenCV }) {
                 ALEJO EZEQUIEL SOSA
               </span>
               <span className="text-[10px] font-mono text-[#DDD6FE] font-bold block mt-0.5">
-                WEB DEV & AGENTES IA
+                WEB DEV JR. • UNLP
               </span>
             </div>
           </button>
@@ -86,7 +85,7 @@ export default function Navbar({ onOpenCV }) {
           </nav>
 
           {/* Action CTAs */}
-          <div className="hidden sm:flex items-center gap-2.5">
+          <div className="hidden sm:flex items-center gap-2">
             <a
               href={personal.github}
               target="_blank"
@@ -94,8 +93,26 @@ export default function Navbar({ onOpenCV }) {
               title="GitHub Oficial (@alejoezequiel99)"
               className="neu-btn px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 text-purple-200 hover:text-white"
             >
-              <Icon name="Github" size={16} className="text-[#A78BFA]" />
+              <Icon name="Github" size={15} className="text-[#A78BFA]" />
               <span className="hidden md:inline">GITHUB</span>
+            </a>
+            <a
+              href={personal.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              title="LinkedIn Oficial"
+              className="neu-btn px-3 py-1.5 rounded-xl text-xs font-bold flex items-center gap-1.5 text-blue-300 hover:text-white"
+            >
+              <Icon name="Linkedin" size={15} className="text-blue-400" />
+              <span className="hidden md:inline">LINKEDIN</span>
+            </a>
+            <a
+              href={pdfUrl}
+              download="CV_Alejo_Ezequiel_Sosa.pdf"
+              className="neu-btn-primary px-3.5 py-1.5 rounded-xl text-xs font-black flex items-center gap-1.5 uppercase tracking-wide"
+            >
+              <Icon name="Download" size={14} />
+              <span>CV PDF</span>
             </a>
           </div>
 
@@ -125,15 +142,32 @@ export default function Navbar({ onOpenCV }) {
                 <span className="ml-auto text-xs font-mono text-purple-400">{item.number}</span>
               </button>
             ))}
-            <div className="flex gap-2 pt-2">
+            <div className="grid grid-cols-3 gap-2 pt-2">
               <a
                 href={personal.github}
                 target="_blank"
                 rel="noreferrer"
-                className="neu-btn p-2.5 rounded-xl text-xs font-black flex items-center justify-center gap-2 text-white flex-1"
+                className="neu-btn p-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1 text-white text-center"
               >
-                <Icon name="Github" size={16} className="text-[#A78BFA]" />
-                <span>GITHUB</span>
+                <Icon name="Github" size={14} />
+                <span>GitHub</span>
+              </a>
+              <a
+                href={personal.linkedin}
+                target="_blank"
+                rel="noreferrer"
+                className="neu-btn p-2 rounded-xl text-xs font-bold flex items-center justify-center gap-1 text-blue-300 text-center"
+              >
+                <Icon name="Linkedin" size={14} />
+                <span>LinkedIn</span>
+              </a>
+              <a
+                href={pdfUrl}
+                download="CV_Alejo_Ezequiel_Sosa.pdf"
+                className="neu-btn-primary p-2 rounded-xl text-xs font-black flex items-center justify-center gap-1 text-white text-center"
+              >
+                <Icon name="Download" size={14} />
+                <span>CV PDF</span>
               </a>
             </div>
           </div>

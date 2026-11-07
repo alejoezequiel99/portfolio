@@ -1,18 +1,17 @@
-import React, { useEffect } from 'react';
+﻿import React, { useEffect } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import Icon from './Icon';
 
 export default function Footer() {
   const { personal } = portfolioData;
 
-  // Developer Easter Egg in Console
   useEffect(() => {
     console.log(
-      '%c🚀 ¡HOLA DEVELOPER! // BIENVENID@ AL PORTFOLIO DE ALEJO EZEQUIEL SOSA 🚀',
+      '%c🚀 ¡HOLA RECLUTADOR / DEVELOPER! // BIENVENIDO AL PORTFOLIO DE ALEJO EZEQUIEL SOSA 🚀',
       'background: #1E0664; color: #DDD6FE; font-size: 16px; font-weight: 900; padding: 10px 16px; border-radius: 8px; border: 2px solid #7C4DFF;'
     );
     console.log(
-      '%c👨‍💻 Nombre: Alejo Ezequiel Sosa\n📍 Ubicación: Berisso, Buenos Aires, Argentina\n🎓 Formación: Programador Web con Agentes IA (CFL 404 Berisso)\n⚡ Stack Core: JavaScript, Java, React, NodeJS, Docker, Git, CSS, Tailwind\n🤖 Enfoque: Soluciones Web Modernas + Agentes IA + Sistema FDD Stock\n✉ Contacto: ' + personal.email + '\n🐙 GitHub: ' + personal.github + '\n💼 LinkedIn: ' + personal.linkedin,
+      '%c👨‍💻 Nombre: Alejo Ezequiel Sosa\n📍 Ubicación: Berisso, Buenos Aires, Argentina\n🎓 Formación: Analista Programador Universitario (UNLP) & CFL 404\n⚡ Stack: JavaScript, React, Astro, Tailwind, SQL, PostgreSQL, Java, Git\n🤖 Enfoque: Soluciones Web + Agentes IA + Rigor Analítico & Datos\n✉ Contacto: ' + personal.email + '\n🐙 GitHub: ' + personal.github + '\n💼 LinkedIn: ' + personal.linkedin,
       'color: #C4B5FD; font-size: 12px; font-weight: 600; line-height: 1.6;'
     );
   }, [personal]);
@@ -47,7 +46,7 @@ export default function Footer() {
               </div>
             </div>
             <p className="text-xs sm:text-sm text-purple-200 max-w-sm leading-relaxed">
-              Desarrollador web con base en Berisso, Buenos Aires. Especializado en JavaScript, Java, React, NodeJS y soluciones impulsadas con agentes de inteligencia artificial.
+              Desarrollador web con base en Berisso / La Plata, Buenos Aires. Estudiante de Analista Programador Universitario (UNLP), especializado en JavaScript, React, Astro, SQL y soluciones aceleradas con Agentes de Inteligencia Artificial.
             </p>
           </div>
 
@@ -56,28 +55,41 @@ export default function Footer() {
             <div className="flex items-center gap-2">
               <span className="w-2.5 h-2.5 rounded-full bg-[#7C4DFF] shadow-[0_0_8px_#7C4DFF]" />
               <h4 className="font-black text-sm uppercase tracking-wider text-white">
-                CONTACTO DIRECTO & NETWORKING
+                CONTACTO DIRECTO // TRAINEE & JR
               </h4>
             </div>
             <p className="text-xs text-purple-200 leading-relaxed font-mono">
-              Disponible para proyectos de desarrollo web, integraciones con agentes IA y colaboraciones de alto impacto.
+              Disponible para incorporaciones inmediatas en desarrollo web, análisis de datos, soporte IT y proyectos de software.
             </p>
-            <div className="pt-1">
-              <a
-                href={`mailto:${personal.email}`}
-                className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white hover:text-[#DDD6FE] transition-colors"
-              >
-                <Icon name="Mail" size={16} className="text-[#A78BFA]" />
-                <span>{personal.email}</span>
-              </a>
+            <div className="pt-1 space-y-1">
+              <div>
+                <a
+                  href={`mailto:${personal.email}`}
+                  className="inline-flex items-center gap-2 text-xs font-mono font-bold text-white hover:text-[#DDD6FE] transition-colors"
+                >
+                  <Icon name="Mail" size={16} className="text-[#A78BFA]" />
+                  <span>{personal.email}</span>
+                </a>
+              </div>
+              <div>
+                <a
+                  href={personal.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex items-center gap-2 text-xs font-mono font-bold text-emerald-400 hover:text-emerald-300 transition-colors"
+                >
+                  <Icon name="Phone" size={16} className="text-emerald-400" />
+                  <span>{personal.phone} (WhatsApp)</span>
+                </a>
+              </div>
             </div>
           </div>
 
-          {/* Redes Finales: GitHub, Correo, LinkedIn */}
+          {/* Redes Finales: GitHub, LinkedIn, WhatsApp, Correo */}
           <div className="md:col-span-3 flex flex-col md:items-end justify-between space-y-4">
             <div>
               <h4 className="font-black text-xs uppercase tracking-wider text-white mb-3">
-                REDES OFICIALES (CONTACTO)
+                REDES OFICIALES
               </h4>
               <div className="flex items-center gap-2.5">
                 {/* GitHub */}
@@ -97,9 +109,20 @@ export default function Footer() {
                   target="_blank"
                   rel="noreferrer"
                   title="LinkedIn de Alejo Sosa"
-                  className="w-11 h-11 rounded-2xl bg-purple-950/80 border border-purple-400/30 hover:border-white shadow-neu-purple-sm hover:scale-105 transition-all flex items-center justify-center text-white"
+                  className="w-11 h-11 rounded-2xl bg-blue-950/80 border border-blue-400/30 hover:border-white shadow-neu-purple-sm hover:scale-105 transition-all flex items-center justify-center text-blue-400"
                 >
                   <Icon name="Linkedin" size={20} />
+                </a>
+
+                {/* WhatsApp */}
+                <a
+                  href={personal.whatsapp}
+                  target="_blank"
+                  rel="noreferrer"
+                  title="WhatsApp de Alejo Sosa"
+                  className="w-11 h-11 rounded-2xl bg-emerald-950/80 border border-emerald-400/40 hover:border-white shadow-neu-purple-sm hover:scale-105 transition-all flex items-center justify-center text-emerald-400"
+                >
+                  <Icon name="Phone" size={20} />
                 </a>
 
                 {/* Correo */}
@@ -124,16 +147,16 @@ export default function Footer() {
 
         </div>
 
-        {/* Bottom Bar: Copyright & Console Note */}
+        {/* Bottom Bar: Copyright & UNLP Student note */}
         <div className="pt-8 border-t border-purple-400/20 flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-xs font-mono text-purple-300 text-center sm:text-left">
-            © {new Date().getFullYear()} Alejo Ezequiel Sosa • Desarrollador Web • Berisso, Buenos Aires, Argentina.
+            © {new Date().getFullYear()} Alejo Ezequiel Sosa • Desarrollador Web &amp; Estudiante UNLP • Berisso / La Plata, Argentina.
           </p>
 
           <div className="p-2 px-4 rounded-xl neu-inset flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
             <span className="text-xs font-mono font-bold text-purple-200">
-              // psst - open the console (F12) 👀
+              Disponible para propuestas IT // Open to work
             </span>
           </div>
         </div>

@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+﻿import React, { useState } from 'react';
 import { portfolioData } from '../data/portfolioData';
 import Icon from './Icon';
 import confetti from 'canvas-confetti';
 
 export default function Contact({ onOpenCV }) {
-  const { personal, contact } = portfolioData;
+  const { personal } = portfolioData;
 
   const [formData, setFormData] = useState({
     name: '',
@@ -25,7 +25,6 @@ export default function Contact({ onOpenCV }) {
 
     setLoading(true);
 
-    // Simulate sending with confetti in purple/lavender/white theme
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
@@ -39,6 +38,8 @@ export default function Contact({ onOpenCV }) {
       setTimeout(() => setSubmitted(false), 5000);
     }, 700);
   };
+
+  const pdfUrl = `${import.meta.env.BASE_URL}cv/CV_Alejo_Ezequiel_Sosa.pdf`;
 
   return (
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto scroll-mt-24">
@@ -55,7 +56,7 @@ export default function Contact({ onOpenCV }) {
           </h2>
         </div>
         <p className="text-xs sm:text-sm font-mono text-purple-200 max-w-md">
-          Escríbeme para colaborar, coordinar entrevistas o descargar mi currículum profesional en formato PDF.
+          Escríbeme para coordinar entrevistas, colaborar en proyectos IT o descargar mi currículum en formato PDF.
         </p>
       </div>
 
@@ -71,19 +72,27 @@ export default function Contact({ onOpenCV }) {
             </div>
 
             <h3 className="text-xl sm:text-2xl font-black text-white uppercase leading-tight mb-2">
-              Currículum Vitae
+              Currículum Vitae Oficial
             </h3>
             <p className="text-xs sm:text-sm text-purple-200 leading-relaxed mb-6">
-              Descargá el CV oficial de <strong>Alejo Ezequiel Sosa</strong> en formato PDF con todos los datos personales, formación en el CFL 404, proyectos y dominio tecnológico actualizado.
+              Descargá el CV oficial de <strong>Alejo Ezequiel Sosa</strong> en formato PDF con todos los datos personales, formación universitaria en la UNLP, trayectoria institucional en el Ministerio de Seguridad y proyectos tecnológicos.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-3">
-              <button
-                onClick={onOpenCV}
-                className="neu-btn-primary py-3 px-5 rounded-2xl text-xs font-black flex items-center justify-center gap-2 uppercase tracking-wide flex-1"
+              <a
+                href={pdfUrl}
+                download="CV_Alejo_Ezequiel_Sosa.pdf"
+                className="neu-btn-primary py-3 px-5 rounded-2xl text-xs font-black flex items-center justify-center gap-2 uppercase tracking-wide flex-1 text-center"
               >
                 <Icon name="Download" size={16} />
-                <span>VER & DESCARGAR CV (PDF)</span>
+                <span>DESCARGAR PDF (OFICIAL)</span>
+              </a>
+              <button
+                onClick={onOpenCV}
+                className="neu-btn py-3 px-4 rounded-2xl text-xs font-bold flex items-center justify-center gap-1.5 uppercase tracking-wide"
+              >
+                <Icon name="Eye" size={15} />
+                <span>Ver CV</span>
               </button>
             </div>
           </div>
@@ -91,10 +100,11 @@ export default function Contact({ onOpenCV }) {
           {/* Direct Details Card */}
           <div className="neu-card p-6 rounded-3xl space-y-4">
             <h4 className="text-xs font-mono font-bold text-[#DDD6FE] uppercase tracking-wider">
-              INFORMACIÓN DIRECTA // BERISSO, ARG.
+              INFORMACIÓN DIRECTA // CANALES OFICIALES
             </h4>
 
             <div className="space-y-3">
+              {/* Ubicación */}
               <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-purple-900/80 border border-purple-400/30 flex items-center justify-center text-[#A78BFA]">
                   <Icon name="MapPin" size={18} />
@@ -105,18 +115,56 @@ export default function Contact({ onOpenCV }) {
                 </div>
               </div>
 
+              {/* Email */}
               <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-purple-900/80 border border-purple-400/30 flex items-center justify-center text-[#A78BFA]">
                   <Icon name="Mail" size={18} />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-purple-300 block uppercase">Correo Electrónico</span>
+                  <span className="text-[10px] font-mono text-purple-300 block uppercase">Email Principal</span>
                   <a href={`mailto:${personal.email}`} className="text-xs font-bold text-white hover:underline">
                     {personal.email}
                   </a>
                 </div>
               </div>
 
+              {/* WhatsApp */}
+              <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-emerald-950/80 border border-emerald-400/40 flex items-center justify-center text-emerald-400">
+                  <Icon name="Phone" size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-emerald-300 block uppercase">WhatsApp Directo</span>
+                  <a 
+                    href={personal.whatsapp} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs font-bold text-white hover:text-emerald-400 hover:underline transition-colors"
+                  >
+                    {personal.phone} (Enviar mensaje)
+                  </a>
+                </div>
+              </div>
+
+              {/* LinkedIn */}
+              <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
+                <div className="w-9 h-9 rounded-lg bg-blue-950/80 border border-blue-400/40 flex items-center justify-center text-blue-400">
+                  <Icon name="Linkedin" size={18} />
+                </div>
+                <div>
+                  <span className="text-[10px] font-mono text-blue-300 block uppercase">LinkedIn Oficial</span>
+                  <a 
+                    href={personal.linkedin} 
+                    target="_blank" 
+                    rel="noreferrer" 
+                    className="text-xs font-bold text-white hover:underline hover:text-blue-300 transition-colors"
+                  >
+                    linkedin.com/in/alejo-ezequiel-sosa
+                  </a>
+                </div>
+              </div>
+
+              {/* GitHub */}
               <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-purple-900/80 border border-purple-400/30 flex items-center justify-center text-[#A78BFA]">
                   <Icon name="Github" size={18} />
@@ -134,12 +182,13 @@ export default function Contact({ onOpenCV }) {
                 </div>
               </div>
 
+              {/* Formación */}
               <div className="p-3 rounded-xl neu-inset flex items-center gap-3">
                 <div className="w-9 h-9 rounded-lg bg-purple-900/80 border border-purple-400/30 flex items-center justify-center text-[#A78BFA]">
                   <Icon name="Award" size={18} />
                 </div>
                 <div>
-                  <span className="text-[10px] font-mono text-purple-300 block uppercase">Formación</span>
+                  <span className="text-[10px] font-mono text-purple-300 block uppercase">Formación Universitaria</span>
                   <span className="text-xs font-bold text-white">{personal.educationPrimary}</span>
                 </div>
               </div>
@@ -156,10 +205,10 @@ export default function Contact({ onOpenCV }) {
           >
             <div className="border-b border-purple-400/20 pb-4 mb-2">
               <h3 className="text-xl sm:text-2xl font-black text-white uppercase tracking-tight">
-                Enviar un Mensaje
+                Enviar un Mensaje Directo
               </h3>
               <p className="text-xs font-mono text-purple-200 mt-1">
-                Completa los campos a continuación para iniciar contacto directo.
+                Completa los campos a continuación para contactar a Alejo Sosa.
               </p>
             </div>
 
@@ -199,7 +248,7 @@ export default function Contact({ onOpenCV }) {
               </label>
               <input
                 type="text"
-                placeholder="Propuesta de proyecto, consulta técnica, etc."
+                placeholder="Propuesta laboral IT, proyecto web, etc."
                 value={formData.subject}
                 onChange={(e) => setFormData({ ...formData, subject: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl neu-inset text-white text-xs font-mono placeholder-purple-300/40 focus:outline-none focus:border-purple-300"
@@ -213,7 +262,7 @@ export default function Contact({ onOpenCV }) {
               <textarea
                 rows={5}
                 required
-                placeholder="Hola Alejo, me gustaría conversar sobre..."
+                placeholder="Hola Alejo, me gustaría conversar sobre una oportunidad en desarrollo web..."
                 value={formData.message}
                 onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                 className="w-full px-4 py-3 rounded-xl neu-inset text-white text-xs font-mono placeholder-purple-300/40 focus:outline-none focus:border-purple-300 resize-none"
