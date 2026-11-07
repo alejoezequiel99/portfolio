@@ -8,7 +8,7 @@
     headline: "DESARROLLANDO EXPERIENCIAS WEB INTELIGENTES, ESCALABLES Y CON RIGOR ANALÍTICO",
     tagline: "Estudiante de Analista Programador Universitario (UNLP) especializado en Desarrollo Web, SQL y aceleración con Agentes de IA.",
     location: "Berisso, Buenos Aires, Argentina",
-    email: "alejoezequiel99@hotmail.com",
+    email: "alejoezequiel9999@gmail.com",
     emailAlt: "alejoezequiel9999@gmail.com",
     github: "https://github.com/alejoezequiel99",
     linkedin: "https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/",
@@ -291,7 +291,7 @@
   contact: {
     name: "Alejo Ezequiel Sosa",
     location: "Berisso / La Plata, Buenos Aires, Argentina",
-    email: "alejoezequiel99@hotmail.com",
+    email: "alejoezequiel9999@gmail.com",
     emailAlt: "alejoezequiel9999@gmail.com",
     githubUrl: "https://github.com/alejoezequiel99",
     linkedinUrl: "https://www.linkedin.com/in/alejo-ezequiel-sosa-55b68242a/",
